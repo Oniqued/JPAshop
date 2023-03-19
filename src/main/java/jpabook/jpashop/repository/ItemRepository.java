@@ -12,6 +12,7 @@ import java.util.List;
 public class ItemRepository {
     private final EntityManager em;
 
+    //중요한 부분! persist와 merge를 구분 할 것.
     public void save(Item item) {
         if (item.getId() == null) {
             em.persist(item);
